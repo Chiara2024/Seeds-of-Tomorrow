@@ -18,6 +18,8 @@
       font-family: 'Montserrat', sans-serif;
       color: #333;
       background-color: #F5F5F5;
+      /* Per evitare che il contenuto vada sotto la navbar fissa */
+      padding-top: 60px;
     }
     
     /* Navbar */
@@ -52,7 +54,7 @@
     .site-title {
       font-size: 1.5rem;
       font-weight: 700;
-      color: #2E7D32; /* Verde scuro */
+      color: #2E7D32;
     }
     
     .navbar-right a {
@@ -69,22 +71,17 @@
     
     /* Hero Section */
     header .hero {
-      position: relative; /* Aggiunto per contenere il posizionamento assoluto del figlio */
+      position: relative;
       background: url('bg.jpg') no-repeat center center/cover;
       height: 100vh;
-      padding-top: 60px; /* Spazio per la navbar */
-      /* Rimuovi i seguenti se non necessari: 
-      display: flex;
-      justify-content: center;
-      align-items: center; 
-      */
+      padding-top: 60px; /* spazio per la navbar */
     }
-
+    
     .hero-content {
       position: absolute;
-      top: 60px;   /* Distanza dal top, subito sotto la navbar */
-      right: 20px; /* Distanza dal lato destro */
-      text-align: right; /* Allinea il testo a destra */
+      top: 60px;   /* subito sotto la navbar */
+      right: 20px;
+      text-align: right;
       background: rgba(255, 255, 255, 0);
       padding: 20px 40px;
       border-radius: 8px;
@@ -106,6 +103,7 @@
       display: flex;
       justify-content: space-around;
       align-items: flex-start;
+      flex-wrap: wrap;
       padding: 60px 20px;
       max-width: 1200px;
       margin: 0 auto;
@@ -113,11 +111,13 @@
     
     .card {
       background-color: #fff;
-      width: 30%;
+      flex: 1 1 300px;
+      max-width: 350px;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
       padding: 20px;
+      margin: 10px;
     }
     
     .card img {
@@ -148,6 +148,49 @@
       width: 100%;
       font-size: 0.9rem;
       color: #333;
+    }
+    
+    /* Media Query per dispositivi mobili */
+    @media (max-width: 768px) {
+      /* Navbar: disposizione in colonna */
+      .navbar-container {
+        flex-direction: column;
+      }
+      
+      .navbar-right {
+        margin-top: 10px;
+      }
+      
+      /* Hero: centra il contenuto su mobile per una migliore leggibilità */
+      .hero-content {
+        position: static;
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+      }
+      
+      header .hero {
+        height: auto;
+        padding-top: 80px;
+        padding-bottom: 20px;
+      }
+      
+      /* Cards: disponi le card in colonna, una sotto l'altra */
+      .cards-section {
+        flex-direction: column;
+        padding: 20px;
+      }
+      
+      .card {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+      
+      /* Footer: posizione relativa per evitare sovrapposizioni */
+      footer {
+        position: relative;
+      }
     }
   </style>
 </head>
@@ -198,8 +241,8 @@
         <h3>Join us in growing a greener future—one plant at a time!</h3>
         <p>Your Botanical Garden is an innovative eco-tourism project that invites visitors to actively participate in the cultivation and preservation of native plant species. This initiative allows tourists to adopt and care for indigenous flora, contributing to local conservation efforts while enjoying a hands-on experience in nature.
           Visitors can choose from a variety of native plants, learn sustainable gardening techniques, and understand the vital role of these species in maintaining biodiversity. Expert botanists guide participants through the process, sharing knowledge about local ecosystems and the importance of preserving native flora.
-          Beyond cultivation, Your Botanical Garden offers guided tours, workshops, and relaxation areas where guests can immerse themselves in the beauty of the landscape
-          </p>
+          Beyond cultivation, Your Botanical Garden offers guided tours, workshops, and relaxation areas where guests can immerse themselves in the beauty of the landscape.
+        </p>
       </div>
     </section>
   </main>
@@ -210,7 +253,6 @@
   </footer>
   
   <script>
-
   </script>
 </body>
 </html>

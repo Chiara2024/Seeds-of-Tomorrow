@@ -77,14 +77,16 @@
       padding-top: 60px; /* spazio per la navbar */
     }
 
-    /* Media query per desktop */
     @media (min-width: 769px) {
       header .hero {
-        background-size: contain;
+        width: 100vw; /* Occupa tutta la larghezza della finestra */
+        height: 100vh; /* Mantiene l'altezza piena */
+        background-size: contain; /* Mostra tutta l'immagine senza tagli */
         background-repeat: no-repeat;
-        background-position: center top;
+        background-position: center;
       }
     }
+
     
     .hero-content {
       position: absolute;

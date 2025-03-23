@@ -6,24 +6,34 @@
   <title>Seeds of Tomorrow - Gallery</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    /* Media query per dispositivi mobili: disposizione in colonna e centrazione */
+    @media (max-width: 768px) {
+      .cards-section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .card {
+        width: 90%;
+        max-width: none;
+      }
+    }
     /* Stili per la sezione delle card */
     .cards-section {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       padding: 20px;
-      justify-content: center;  /* centra le card orizzontalmente */
-      align-items: stretch;     /* le card si estendono per avere la stessa altezza nella riga */
+      justify-content: center;  
+      align-items: stretch;
       background-color: #F5F5F5;
-      max-width: 1200px;        /* contenitore centrato */
-      margin: 0 auto;
+      max-width: 1200px;
+      margin: 60px auto 0 auto; /* aggiunto margin-top per distanziare dalla navbar */
     }
-    
     .card {
       display: flex;
-      flex-direction: column;   /* distribuisce verticalmente immagine, titolo e testo */
-      width: 90%;
-      max-width: 350px;         /* puoi impostare un max-width se lo desideri */
+      flex-direction: column;
+      width: 300px;  /* Dimensione fissa per desktop */
       border: 2px solid #333;
       border-radius: 8px;
       overflow: hidden;
@@ -32,43 +42,26 @@
       cursor: pointer;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
-    
     /* Rendiamo l'intera card cliccabile con un link */
     .card a {
       display: block;
       text-decoration: none;
       color: inherit;
     }
-    
     .card img {
       width: 100%;
       height: auto;
       display: block;
     }
-    
     .card h3 {
       font-size: 1rem;
       margin: 10px 0 5px 0;
       color: #333;
     }
-    
     .card p {
       font-size: 0.85rem;
       color: #666;
       margin: 0 10px 10px 10px;
-    }
-    
-    /* Media query per dispositivi mobili: le card vengono disposte in colonna e centrate */
-    @media (max-width: 768px) {
-      .cards-section {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-      }
-      .card {
-        width: 90%;  /* le card occupano il 90% della larghezza del contenitore */
-      }
     }
   </style>
 </head>
@@ -82,7 +75,6 @@
         <p>Descrizione breve della pianta 1.</p>
       </a>
     </div>
-    
     <!-- Card 2 -->
     <div class="card">
       <a href="ammofila.html">
@@ -91,7 +83,6 @@
         <p>Descrizione breve della pianta 2.</p>
       </a>
     </div>
-    
     <!-- Card 3 -->
     <div class="card">
       <a href="lentisco.html">
@@ -100,8 +91,6 @@
         <p>Descrizione breve della pianta 3.</p>
       </a>
     </div>
-    
-    <!-- Aggiungi altre card se necessario -->
   </div>
 </body>
 </html>

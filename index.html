@@ -71,7 +71,8 @@
     .hero-content {
       position: absolute;
       top: 60px;
-      right: 10px;
+      left: 50%;               /* Posiziona il contenuto a metà larghezza */
+      transform: translateX(-50%);  /* Centra orizzontalmente */
       text-align: center;
       padding: 20px 40px;
       border-radius: 8px;
@@ -142,8 +143,7 @@
     main {
       padding-bottom: 100px; /* spazio extra per evitare che il footer sovrapponga le card */
     }
-    
-    /* Media query per dispositivi mobili: disposizione in colonna e centrazione */
+    /* Media query per dispositivi mobili */
     @media (max-width: 768px) {
       .cards-section {
         flex-direction: column;

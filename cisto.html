@@ -6,40 +6,64 @@
   <title>Cisto - Seeds of Tomorrow</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Stili base, puoi copiare quelli di index.html oppure personalizzare */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    /* Reset e stili base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #F5F5F5;
-      padding: 20px;
       color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      background: #fff;
+      max-width: 800px;
+      width: 100%;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
     }
     h1 {
       color: #2E7D32;
       margin-bottom: 20px;
+      font-size: 2.5rem;
     }
     img {
-      max-width: 400px;
-      display: block;
+      max-width: 100%;
+      border-radius: 8px;
       margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    a {
+      display: inline-block;
+      background-color: #2E7D32;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    a:hover {
+      background-color: #276a29;
     }
   </style>
 </head>
 <body>
-  <h1>Cisto</h1>
-  <img src="cisto.jpg" alt="Cisto">
-  <p>
-    Descrizione dettagliata del Cisto.  
-    Puoi inserire informazioni su habitat, curiosità, ecc.
-  </p>
-  
-  <!-- Link per tornare alla homepage o alla gallery -->
-  <p>
+  <div class="container">
+    <h1>Cisto</h1>
+    <img src="cisto.jpg" alt="Cisto">
+    <p>
+      Descrizione dettagliata del Cisto. Qui puoi inserire informazioni su habitat, curiosità, e altri dettagli utili.
+    </p>
     <a href="index.html#gallery">Torna alla Gallery</a>
-  </p>
+  </div>
 </body>
 </html>

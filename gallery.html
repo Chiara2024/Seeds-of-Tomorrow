@@ -2,46 +2,44 @@
     /* Contenitore principale delle card */
     .cards-section {
       display: flex;
-      flex-wrap: wrap;              /* le card vanno a capo se non c'è più spazio */
-      gap: 20px;                    /* distanza orizzontale/verticale tra le card */
+      flex-wrap: wrap;       /* le card vanno a capo se non c'è più spazio */
+      gap: 20px;             /* distanza orizzontale/verticale tra le card */
       padding: 20px;
-      justify-content: flex-start;  /* allinea le card a sinistra */
+      justify-content: flex-start;
       align-items: flex-start;
       background-color: #F5F5F5;
-      /* Se vuoi un'altezza fissa e uno scroll verticale:
-         height: calc(100vh - 60px);
-         overflow-y: auto;
-      */
     }
   
     /* Stile di base per ogni card */
     .card {
-      width: 200px;                /* larghezza fissa: puoi regolarla a piacere */
-      border: 2px solid #333;      /* bordo nero/ scuro */
+      width: 200px;         /* larghezza fissa */
+      border: 2px solid #333;
       border-radius: 8px;
       overflow: hidden;
       text-align: center;
       background-color: #fff;
-      cursor: pointer;
-      /* ombra leggera */
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
   
-    /* Immagine dentro la card */
+    /* Rendiamo l'intera card cliccabile con un link */
+    .card a {
+      display: block;       /* per occupare l'intera card */
+      text-decoration: none;
+      color: inherit;       /* eredità del colore, così non cambia il testo */
+    }
+  
     .card img {
       width: 100%;
-      height: auto;                /* l’altezza si adatta all’immagine */
+      height: auto;
       display: block;
     }
   
-    /* Titolo (nome pianta) */
     .card h3 {
       font-size: 1rem;
-      margin: 10px 0 5px 0;        /* spazio sopra e sotto il titolo */
+      margin: 10px 0 5px 0;
       color: #333;
     }
   
-    /* Descrizione (interna alla card, visibile finché non si clicca) */
     .card p {
       font-size: 0.85rem;
       color: #666;
@@ -49,30 +47,34 @@
     }
   </style>
   
-  <!-- Sezione con tutte le card -->
   <div class="cards-section">
-    
-    <!-- Ogni card deve avere un data-plant univoco
-         e conterrà l’immagine, il titolo e la descrizione -->
-    
-    <div class="card" data-plant="plant1">
-      <img src="cisto.jpg" alt="Immagine Pianta 1">
-      <h3>Cisto</h3>
-      <p>Descrizione breve della pianta 1.</p>
-    </div>
-    
-    <div class="card" data-plant="plant2">
-      <img src="ammofila.jpg" alt="Immagine Pianta 2">
-      <h3>Ammofila</h3>
-      <p>Descrizione breve della pianta 2.</p>
+    <!-- Card 1 -->
+    <div class="card">
+      <a href="cisto.html">
+        <img src="cisto.jpg" alt="Cisto">
+        <h3>Cisto</h3>
+        <p>Descrizione breve della pianta 1.</p>
+      </a>
     </div>
   
-    <div class="card" data-plant="plant3">
-      <img src="lentisco.jpg" alt="Immagine Pianta 3">
-      <h3>lentisco</h3>
-      <p>Descrizione breve della pianta 3.</p>
+    <!-- Card 2 -->
+    <div class="card">
+      <a href="ammofila.html">
+        <img src="ammofila.jpg" alt="Ammofila">
+        <h3>Ammofila</h3>
+        <p>Descrizione breve della pianta 2.</p>
+      </a>
     </div>
-    
+  
+    <!-- Card 3 -->
+    <div class="card">
+      <a href="lentisco.html">
+        <img src="lentisco.jpg" alt="Lentisco">
+        <h3>Lentisco</h3>
+        <p>Descrizione breve della pianta 3.</p>
+      </a>
+    </div>
+  
     <!-- Aggiungi altre card se necessario -->
   </div>
   

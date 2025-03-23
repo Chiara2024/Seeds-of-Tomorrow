@@ -105,11 +105,14 @@
       flex-wrap: wrap;
       gap: 20px;
       padding: 20px;
-      justify-content: center;  /* centra le card orizzontalmente */
-      align-items: flex-start;
+      justify-content: center;  
+      align-items: stretch;  /* Estendi le card per avere la stessa altezza nella riga */
       background-color: #F5F5F5;
     }
+
     .card {
+      display: flex;
+      flex-direction: column;  /* per distribuire il contenuto verticalmente */
       width: 200px;
       border: 2px solid #333;
       border-radius: 8px;
@@ -119,6 +122,7 @@
       cursor: pointer;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
+
     .card img {
       width: 100%;
       height: auto;

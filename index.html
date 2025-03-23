@@ -102,6 +102,46 @@
       color: #333;
       z-index: 1000;
     }
+
+    /* Stili per le card (già utilizzati in gallery.html) */
+    .cards-section {
+      display: flex;
+      flex-wrap: wrap;              /* le card vanno a capo se non c'è più spazio */
+      gap: 20px;                    /* distanza orizzontale/verticale tra le card */
+      padding: 20px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      background-color: #F5F5F5;
+    }
+
+    .card {
+      width: 200px;                /* larghezza fissa: regola a piacere */
+      border: 2px solid #333;      /* bordo nero/ scuro */
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      background-color: #fff;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin: 10px 0 5px 0;
+      color: #333;
+    }
+
+    .card p {
+      font-size: 0.85rem;
+      color: #666;
+      margin: 0 10px 10px 10px;
+    }
   </style>
 </head>
 <body>
@@ -135,24 +175,22 @@
 
   <!-- MAIN -->
   <main id="main-content">
+    <!-- Sezione con le card (contenuto statico oppure da sostituire dinamicamente) -->
     <section class="cards-section">
       <div class="card">
         <img src="card1.png" alt="Immagine 1">
         <h3>Non-Native species</h3>
-        <p>Invasive species are non-native organisms that spread rapidly in new environments, often causing harm to local ecosystems, economies, and even human health. These species, whether plants, animals, or microorganisms, outcompete native species for resources, disrupt food chains, and alter habitats. Invasive species are often introduced through global trade, travel, and accidental releases. Controlling their spread is challenging and costly, making prevention and early detection key strategies in protecting biodiversity and maintaining ecological balance.</p>
+        <p>Invasive species are non-native organisms that spread rapidly in new environments...</p>
       </div>
       <div class="card">
         <img src="card2.png" alt="Immagine 2">
         <h3>Native species</h3>
-        <p>Native flora plays a crucial role in maintaining the health and stability of ecosystems. These plants have evolved alongside local wildlife, creating balanced relationships that support pollinators, herbivores, and other organisms. Native species help prevent soil erosion, regulate water cycles, and contribute to biodiversity by providing food and shelter for various animals. They are also more adapted to local climates and soil conditions, making them more resilient and requiring less maintenance than non-native species. Protecting native flora is essential for preserving ecological integrity, supporting agriculture, and maintaining the natural beauty of landscapes.</p>
+        <p>Native flora plays a crucial role in maintaining the health and stability of ecosystems...</p>
       </div>
       <div class="card">
         <img src="card3.png" alt="Immagine 3">
         <h3>Join us in growing a greener future—one plant at a time!</h3>
-        <p>Your Botanical Garden is an innovative eco-tourism project that invites visitors to actively participate in the cultivation and preservation of native plant species. This initiative allows tourists to adopt and care for indigenous flora, contributing to local conservation efforts while enjoying a hands-on experience in nature.
-          Visitors can choose from a variety of native plants, learn sustainable gardening techniques, and understand the vital role of these species in maintaining biodiversity. Expert botanists guide participants through the process, sharing knowledge about local ecosystems and the importance of preserving native flora.
-          Beyond cultivation, Your Botanical Garden offers guided tours, workshops, and relaxation areas where guests can immerse themselves in the beauty of the landscape.
-        </p>
+        <p>Your Botanical Garden is an innovative eco-tourism project that invites visitors to actively participate...</p>
       </div>
     </section>
   </main>
@@ -164,18 +202,17 @@
   
   <script>
     /**
-     * Carica un file HTML (parziale) e lo inserisce in #main-content.
-     * Se la pagina caricata è 'gallery.html', nasconde la sezione hero.
+     * Funzione per caricare dinamicamente pagine parziali in #main-content.
+     * Se carichi "gallery.html", la sezione hero viene nascosta.
      */
     function loadPage(page) {
       return fetch(page)
         .then(response => response.text())
         .then(data => {
           document.getElementById('main-content').innerHTML = data;
-          // Se viene caricata la gallery, nascondi la sezione hero
-          if (page === 'gallery.html') {
+          if(page === 'gallery.html'){
             const header = document.getElementById('home');
-            if (header) header.style.display = 'none';
+            if(header) header.style.display = 'none';
           }
         });
     }
@@ -184,15 +221,13 @@
     document.querySelectorAll('.navbar-right a').forEach(link => {
       link.addEventListener('click', function(e) {
         const href = this.getAttribute('href').substring(1);
-        // Se l'utente clicca "Gallery", carichiamo gallery.html
         if (href === 'gallery') {
           e.preventDefault();
           loadPage('gallery.html');
         } else if (href === 'home') {
           e.preventDefault();
-          location.reload(); // Ricarica l'intera pagina, mostrando di nuovo l'hero
+          location.reload();
         }
-        // Altri link (about, contacts) gestiscili come preferisci (ad esempio con loadPage)
       });
     });
   </script>

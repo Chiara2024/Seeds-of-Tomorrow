@@ -1,3 +1,4 @@
+<!-- File: index.html -->
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -6,172 +7,19 @@
   <title>Seeds of Tomorrow</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      color: #333;
-      background-color: #F5F5F5;
-      padding-top: 60px;
-    }
-    nav {
-      background-color: #fff;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-    }
-    .navbar-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 10px 20px;
-    }
-    .navbar-left {
-      display: flex;
-      align-items: center;
-    }
-    .navbar-left img {
-      height: 40px;
-      margin-right: 10px;
-    }
-    .site-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #2E7D32;
-    }
-    .navbar-right a {
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: 500;
-      color: #333;
-      transition: color 0.3s;
-    }
-    .navbar-right a:hover {
-      color: #2E7D32;
-    }
-    header .hero {
-      position: relative;
-      background: url('bg.jpg') no-repeat center center/cover;
-      height: 100vh;
-      padding-top: 60px;
-    }
-    .hero-content {
-      position: absolute;
-      top: 60px;
-      right: 10px;
-      text-align: center;
-      background: rgba(255, 255, 255, 0);
-      padding: 20px 40px;
-      border-radius: 8px;
-    }
-    .hero-content h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: #ffffff;
-      -webkit-text-fill-color: #ffffff;
-    }
-    .hero-content p {
-      font-size: 1.8rem;
-      color: #ffffff;
-      -webkit-text-fill-color: #ffffff;
-    }
-    .cards-section {
-      display: flex;
-      justify-content: space-around;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .card {
-      background-color: #fff;
-      flex: 1 1 300px;
-      max-width: 350px;
-      border-radius: 8px;
-      box-shadow: 0 3px 24px #2E7D32;
-      text-align: center;
-      padding: 20px;
-      margin: 10px;
-    }
-    .card img {
-      width: 100%;
-      max-height: 150px;
-      object-fit: contain;
-      margin-bottom: 15px;
-      cursor: pointer;
-    }
-    .card h3 {
-      color: #2E7D32;
-      margin-bottom: 10px;
-    }
-    .card p {
-      font-size: 0.9rem;
-      color: #666;
-    }
-    footer {
-      background-color: #fff;
-      text-align: center;
-      padding: 15px 20px;
-      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-      position: relative;
-      bottom: 0;
-      width: 100%;
-      font-size: 0.9rem;
-      color: #333;
-    }
-    @media (max-width: 768px) {
-      .navbar-container {
-        flex-direction: column;
-      }
-      .navbar-right {
-        margin-top: 10px;
-      }
-      .hero-content {
-        position: static;
-        text-align: center;
-        padding: 20px;
-        margin-top: 20px;
-      }
-      header .hero {
-        height: auto;
-        padding-top: 80px;
-        padding-bottom: 20px;
-      }
-      .cards-section {
-        flex-direction: column;
-        padding: 20px;
-      }
-      .card {
-        width: 100%;
-        max-width: 100%;
-        margin-bottom: 20px;
-      }
-    }
-    .fullscreen {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.8);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 2000;
-    }
-    .fullscreen img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 8px;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Montserrat', sans-serif; background-color: #F5F5F5; padding-top: 60px; }
+    nav { background-color: #fff; position: fixed; top: 0; width: 100%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); z-index: 1000; }
+    .navbar-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 10px 20px; }
+    .navbar-left img { height: 40px; margin-right: 10px; }
+    .site-title { font-size: 1.5rem; font-weight: 700; color: #2E7D32; }
+    .navbar-right a { margin-left: 20px; text-decoration: none; color: #333; }
+    header.hero { position: relative; background: url('bg.jpg') no-repeat center center/cover; height: 100vh; padding-top: 60px; }
+    .hero-content { position: absolute; top: 60px; right: 10px; color: #fff; text-align: center; }
+    footer { background-color: #fff; text-align: center; padding: 15px; position: relative; }
+    .fullscreen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); display: flex; justify-content: center; align-items: center; flex-direction: column; }
+    .fullscreen img { max-width: 90%; max-height: 70%; border-radius: 8px; }
+    .fullscreen p { color: white; margin-top: 20px; }
   </style>
 </head>
 <body>
@@ -183,61 +31,38 @@
       </div>
       <div class="navbar-right">
         <a href="#home">Home</a>
-        <a href="#about">About Us</a>
         <a href="#gallery">Gallery</a>
-        <a href="#contacts">Contacts</a>
       </div>
     </div>
   </nav>
-  
-  <header id="home">
-    <div class="hero">
-      <div class="hero-content">
-        <h1>SEEDS</h1>
-        <h1>OF</h1>
-        <h1>TOMORROW</h1>
-        <p>Plant your ticket!</p>
-      </div>
+  <header class="hero" id="hero-section">
+    <div class="hero-content">
+      <h1>SEEDS OF TOMORROW</h1>
+      <p>Plant your ticket!</p>
     </div>
   </header>
-
-  <main id="main-content">
-    <!-- Contenuto dinamico qui -->
-  </main>
-  
+  <main id="main-content"></main>
   <footer>
     <p>@Chiara Riggio 2025 - Seeds of Tomorrow</p>
   </footer>
-  
   <script>
     function loadPage(page) {
-      fetch(page)
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('main-content').innerHTML = data;
-        });
+      fetch(page).then(res => res.text()).then(data => {
+        document.getElementById('main-content').innerHTML = data;
+        document.getElementById('hero-section').style.display = 'none';
+      });
     }
     document.querySelectorAll('.navbar-right a').forEach(link => {
-      link.addEventListener('click', function(e) {
-        const href = this.getAttribute('href').substring(1);
-        if (href === 'gallery') {
-          e.preventDefault();
-          loadPage('gallery.html');
-        } else if (href === 'home') {
-          location.reload();
-        }
-      });
+      link.onclick = e => {
+        e.preventDefault();
+        if (link.getAttribute('href').substring(1) === 'gallery') loadPage('gallery.html');
+        else location.reload();
+      };
     });
-    document.addEventListener('click', function(e) {
-      if (e.target.closest('.card img')) {
-        const src = e.target.src;
-        const fullscreen = document.createElement('div');
-        fullscreen.classList.add('fullscreen');
-        fullscreen.innerHTML = `<img src="${src}" alt=""><span style="position:absolute; top:20px; right:30px; color:white; font-size:30px; cursor:pointer;">&times;</span>`;
-        document.body.appendChild(fullscreen);
-        fullscreen.addEventListener('click', () => fullscreen.remove());
-      }
-    });
+    window.onload = () => {
+      const params = new URLSearchParams(location.search);
+      if (params.get('plant')) loadPage('gallery.html?plant=' + params.get('plant'));
+    };
   </script>
 </body>
 </html>

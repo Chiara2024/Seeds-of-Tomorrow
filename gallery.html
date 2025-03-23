@@ -1,16 +1,27 @@
 <section class="cards-section">
-    <div class="card">
-      <img src="cisto.jpg" alt="Cisto">
-      <h3>Cisto</h3>
+    <div class="card" onclick="expandImage('cisto.jpg', 'Il Cisto è un arbusto tipico delle zone mediterranee, noto per i suoi splendidi fiori dal bianco al rosa intenso.', 'cisto')">
+      <img src="cisto.jpg" alt="Cisto"><h3>Cisto</h3>
     </div>
-    <div class="card">
-      <img src="ammofila.jpg" alt="Ammofila">
-      <h3>Ammofila</h3>
+    <div class="card" onclick="expandImage('ammofila.jpg', 'L’Ammofila stabilizza le dune costiere proteggendole dall’erosione.', 'ammofila')">
+      <img src="ammofila.jpg" alt="Ammofila"><h3>Ammofila</h3>
     </div>
-    <div class="card">
-      <img src="lentisco.jpg" alt="Lentisco">
-      <h3>Lentisco</h3>
+    <div class="card" onclick="expandImage('lentisco.jpg', 'Il Lentisco è un arbusto sempreverde della macchia mediterranea, resistente e utile per la biodiversità.', 'lentisco')">
+      <img src="lentisco.jpg" alt="Lentisco"><h3>Lentisco</h3>
     </div>
-    <!-- Aggiungi altre card se necessario -->
   </section>
+  <script>
+    function expandImage(src, desc, id) {
+      const full = document.createElement('div');
+      full.classList.add('fullscreen');
+      full.innerHTML = `<img src="${src}"><p>${desc}</p><span onclick="this.parentElement.remove()" style="position:absolute;top:20px;right:30px;color:white;font-size:30px;cursor:pointer;">&times;</span>`;
+      document.body.append(full);
+      history.pushState({}, '', '?plant=' + id);
+    }
+    window.onload = () => {
+      const p = new URLSearchParams(location.search).get('plant');
+      if (p === 'cisto') expandImage('cisto.jpg', 'Il Cisto è un arbusto tipico delle zone mediterranee.', 'cisto');
+      else if (p === 'ammofila') expandImage('ammofila.jpg', 'Ammofila protegge le dune dall’erosione.', 'ammofila');
+      else if (p === 'lentisco') expandImage('lentisco.jpg', 'Lentisco, arbusto sempreverde utile alla biodiversità.', 'lentisco');
+    };
+  </script>
   

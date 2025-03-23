@@ -1,66 +1,69 @@
-<style>
-    /* Contenitore principale delle card */
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seeds of Tomorrow - Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Media query per dispositivi mobili: disposizione in colonna e centrazione */
     @media (max-width: 768px) {
-    .cards-section {
+      .cards-section {
         flex-direction: column;
-        justify-content: center; /* centra gli elementi orizzontalmente in modalità colonna */
+        justify-content: center;
         align-items: center;
         width: 100%;
       }
-
     }
-      /* Stili per le card */
-      .cards-section {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        padding: 20px;
-        justify-content: center;  
-        align-items: stretch;  /* Estendi le card per avere la stessa altezza nella riga */
-        background-color: #F5F5F5;
-      }
-
-      .card {
-        display: flex;
-        flex-direction: column;  /* per distribuire il contenuto verticalmente */
-        width: 90%; 
-        max-width: none;
-        border: 2px solid #333;
-        border-radius: 8px;
-        overflow: hidden;
-        text-align: center;
-        background-color: #fff;
-        cursor: pointer;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      }
-
-  
+    /* Stili per le card */
+    .cards-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      justify-content: center;  
+      align-items: stretch;
+      background-color: #F5F5F5;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      max-width: none;
+      border: 2px solid #333;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      background-color: #fff;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
     /* Rendiamo l'intera card cliccabile con un link */
     .card a {
-      display: block;       /* per occupare l'intera card */
+      display: block;
       text-decoration: none;
-      color: inherit;       /* eredità del colore, così non cambia il testo */
+      color: inherit;
     }
-  
     .card img {
       width: 100%;
       height: auto;
       display: block;
     }
-  
     .card h3 {
       font-size: 1rem;
       margin: 10px 0 5px 0;
       color: #333;
     }
-  
     .card p {
       font-size: 0.85rem;
       color: #666;
       margin: 0 10px 10px 10px;
     }
   </style>
-  
+</head>
+<body>
   <div class="cards-section">
     <!-- Card 1 -->
     <div class="card">
@@ -70,7 +73,6 @@
         <p>Descrizione breve della pianta 1.</p>
       </a>
     </div>
-  
     <!-- Card 2 -->
     <div class="card">
       <a href="ammofila.html">
@@ -79,7 +81,6 @@
         <p>Descrizione breve della pianta 2.</p>
       </a>
     </div>
-  
     <!-- Card 3 -->
     <div class="card">
       <a href="lentisco.html">
@@ -88,7 +89,7 @@
         <p>Descrizione breve della pianta 3.</p>
       </a>
     </div>
-  
     <!-- Aggiungi altre card se necessario -->
   </div>
-  
+</body>
+</html>

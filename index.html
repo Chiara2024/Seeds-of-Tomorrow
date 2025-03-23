@@ -99,30 +99,21 @@
       color: #333;
       z-index: 1000;
     }
-
-    @media (max-width: 768px) {
-    .cards-section {
-        flex-direction: column;
-        justify-content: center; /* centra gli elementi orizzontalmente in modalità colonna */
-        align-items: center;
-        width: 100%;
-      }
-
-    }
-    /* Stili per le card */
+    /* Contenitore centrale per il contenuto delle card */
     .cards-section {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       padding: 20px;
       justify-content: center;  
-      align-items: stretch;  /* Estendi le card per avere la stessa altezza nella riga */
+      align-items: stretch;
       background-color: #F5F5F5;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-
     .card {
       display: flex;
-      flex-direction: column;  /* per distribuire il contenuto verticalmente */
+      flex-direction: column;
       width: 90%;
       max-width: none;
       border: 2px solid #333;
@@ -133,7 +124,6 @@
       cursor: pointer;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
-
     .card img {
       width: 100%;
       height: auto;
@@ -151,6 +141,20 @@
     }
     main {
       padding-bottom: 100px; /* spazio extra per evitare che il footer sovrapponga le card */
+    }
+    
+    /* Media query per dispositivi mobili: disposizione in colonna e centrazione */
+    @media (max-width: 768px) {
+      .cards-section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+      .card {
+        width: 90%;
+        max-width: none;
+      }
     }
   </style>
 </head>
@@ -182,10 +186,10 @@
       </div>
     </div>
   </header>
-
+  
   <!-- MAIN -->
   <main id="main-content">
-    <!-- Qui il contenuto statico o dinamico, ad esempio le card iniziali -->
+    <!-- Contenuto statico iniziale (es. le card) -->
     <section class="cards-section">
       <div class="card">
         <img src="card1.png" alt="Immagine 1">
@@ -236,13 +240,12 @@
           loadPage('gallery.html');
         } else if (href === 'home') {
           e.preventDefault();
-          loadPage('index.html');
           location.reload();
         }
       });
     });
     
-    // Controlla se l'URL contiene l'ancora #gallery al caricamento della pagina
+    // Se l'URL contiene l'ancora #gallery, carica automaticamente la gallery
     window.addEventListener('DOMContentLoaded', () => {
       if (window.location.hash === '#gallery') {
         loadPage('gallery.html');

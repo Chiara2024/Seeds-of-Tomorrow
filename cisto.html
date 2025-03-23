@@ -25,22 +25,35 @@
       padding: 40px;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      text-align: center;
+      text-align: justify;
     }
     h1 {
       color: #2E7D32;
       margin-bottom: 20px;
       font-size: 2.5rem;
+      text-align: center;
     }
     img {
       max-width: 100%;
       border-radius: 8px;
       margin-bottom: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     p {
       font-size: 1.1rem;
       line-height: 1.6;
       margin-bottom: 20px;
+      text-align: justify;
+    }
+    /* Box per evidenziare le curiosità "Lo sapevi che" */
+    .highlight {
+      background-color: #e6f7e6; /* verde chiaro */
+      padding: 15px;
+      border-left: 4px solid #2E7D32;
+      margin-bottom: 20px;
+      font-style: italic;
     }
     a {
       display: inline-block;
@@ -50,6 +63,7 @@
       padding: 10px 20px;
       border-radius: 4px;
       transition: background-color 0.3s;
+      margin-top: 20px;
     }
     a:hover {
       background-color: #276a29;
@@ -61,8 +75,26 @@
     <h1>Cisto</h1>
     <img src="cisto.jpg" alt="Cisto">
     <p>
-      Descrizione dettagliata del Cisto. Qui puoi inserire informazioni su habitat, curiosità, e altri dettagli utili.
+      Il Cisto (Cistus spp.) è un arbusto tipico delle zone mediterranee, noto per i suoi splendidi fiori che variano dal bianco al rosa intenso, spesso con una caratteristica macchia alla base dei petali. Cresce in suoli poveri e aridi, dimostrandosi una specie pioniera capace di riprendersi rapidamente dopo eventi come incendi. Proprio il fuoco gioca un ruolo chiave nella sua germinazione, aiutando ad aprire i semi. Il periodo migliore per piantarlo è l’autunno, quando le temperature più miti e le piogge favoriscono la crescita.
     </p>
+    <p>
+      Il Cisto è fondamentale per l’ecosistema: protegge il suolo dall’erosione, offre rifugio alla fauna e sostiene insetti impollinatori. Tuttavia, è minacciato dall’urbanizzazione, dai cambiamenti climatici e dalla frequenza sempre maggiore degli incendi, che, se troppo ravvicinati, ne compromettono la rigenerazione.
+    </p>
+    <div class="highlight">
+      <p>
+        Lo sapevi che il Cisto è una delle prime piante a ricrescere dopo un incendio? I suoi semi, rivestiti da una cuticola dura, si aprono solo con il calore, permettendogli di germogliare rapidamente dopo le fiamme.
+      </p>
+    </div>
+    <div class="highlight">
+      <p>
+        Lo sapevi che le sue foglie appiccicose producono una resina profumata chiamata ladano? Nell’antichità veniva raccolta dalla lana delle capre che pascolavano tra i cespugli e usata per la produzione di profumi.
+      </p>
+    </div>
+    <div class="highlight">
+      <p>
+        Lo sapevi che i suoi fiori durano solo un giorno? Ogni mattina sbocciano nuovi fiori che attirano insetti impollinatori in una corsa contro il tempo!
+      </p>
+    </div>
     <a href="index.html#gallery">Torna alla Gallery</a>
   </div>
 </body>

@@ -25,22 +25,35 @@
       padding: 40px;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      text-align: center;
+      text-align: justify;
     }
     h1 {
       color: #2E7D32;
       margin-bottom: 20px;
       font-size: 2.5rem;
+      text-align: center;
     }
     img {
       max-width: 100%;
       border-radius: 8px;
       margin-bottom: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     p {
       font-size: 1.1rem;
       line-height: 1.6;
       margin-bottom: 20px;
+      text-align: justify;
+    }
+    /* Box per evidenziare le curiosità "Lo sapevi che" */
+    .highlight {
+      background-color: #e6f7e6; /* Verde chiaro */
+      padding: 15px;
+      border-left: 4px solid #2E7D32;
+      margin-bottom: 20px;
+      font-style: italic;
     }
     a {
       display: inline-block;
@@ -50,6 +63,7 @@
       padding: 10px 20px;
       border-radius: 4px;
       transition: background-color 0.3s;
+      margin-top: 20px;
     }
     a:hover {
       background-color: #276a29;
@@ -61,8 +75,27 @@
     <h1>Lentisco</h1>
     <img src="lentisco.jpg" alt="Lentisco">
     <p>
-      Descrizione dettagliata del Lentisco. Inserisci informazioni sulle sue caratteristiche, utilizzi tradizionali e altre curiosità.
+      Il lentisco (Pistacia lentiscus) è un arbusto sempreverde tipico della macchia mediterranea, caratterizzato da foglie lucide e piccole bacche che, nel corso delle stagioni, passano dal verde al rosso fino al nero. È una pianta estremamente resistente, in grado di prosperare in suoli aridi e sassosi, sopportando sia la siccità che la salinità delle zone costiere.
     </p>
+    <p>
+      Se vuoi piantarlo, il momento migliore è l’autunno o la primavera, quando il terreno è ancora abbastanza umido da favorire l’attecchimento.
+    </p>
+    <p>
+      Grazie alle sue radici profonde, il lentisco protegge il suolo dall’erosione e contribuisce a mantenere la biodiversità offrendo rifugio e nutrimento a numerosi animali. Le sue bacche sono una preziosa fonte di cibo per gli uccelli in inverno, mentre i suoi piccoli fiori producono nettare per api e altri insetti impollinatori.
+    </p>
+    <p>
+      Nonostante la sua resilienza, il lentisco è minacciato dalla progressiva urbanizzazione, che riduce i suoi habitat naturali, e dai cambiamenti climatici, che possono rendere più frequenti periodi di siccità estrema.
+    </p>
+    <div class="highlight">
+      <p>
+        Lo sapevi che il lentisco veniva usato nell’antichità per l’igiene orale? I suoi ramoscelli venivano masticati come spazzolini naturali, mentre la sua resina era apprezzata per le sue proprietà antibatteriche e rinfrescanti, tanto da essere considerata un precursore del moderno chewing gum!
+      </p>
+    </div>
+    <div class="highlight">
+      <p>
+        Lo sapevi che le sue bacche, una volta macinate, venivano usate per colorare i tessuti? Il colore che ne derivava aveva sfumature rossastre ed era molto apprezzato nelle lavorazioni artigianali.
+      </p>
+    </div>
     <a href="index.html#gallery">Torna alla Gallery</a>
   </div>
 </body>

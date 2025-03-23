@@ -4,25 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seeds of Tomorrow</title>
-  <!-- Importazione del font Montserrat da Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Reset di base */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
     body {
       font-family: 'Montserrat', sans-serif;
       color: #333;
       background-color: #F5F5F5;
-      /* Per evitare che il contenuto vada sotto la navbar fissa */
       padding-top: 60px;
     }
-    
-    /* Navbar */
     nav {
       background-color: #fff;
       position: fixed;
@@ -31,7 +25,6 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       z-index: 1000;
     }
-    
     .navbar-container {
       display: flex;
       justify-content: space-between;
@@ -40,23 +33,19 @@
       margin: 0 auto;
       padding: 10px 20px;
     }
-    
     .navbar-left {
       display: flex;
       align-items: center;
     }
-    
     .navbar-left img {
       height: 40px;
       margin-right: 10px;
     }
-    
     .site-title {
       font-size: 1.5rem;
       font-weight: 700;
       color: #2E7D32;
     }
-    
     .navbar-right a {
       margin-left: 20px;
       text-decoration: none;
@@ -64,44 +53,35 @@
       color: #333;
       transition: color 0.3s;
     }
-    
     .navbar-right a:hover {
       color: #2E7D32;
     }
-    
-    /* Hero Section */
     header .hero {
       position: relative;
       background: url('bg.jpg') no-repeat center center/cover;
       height: 100vh;
-      padding-top: 60px; /* spazio per la navbar */
+      padding-top: 60px;
     }
-    
     .hero-content {
       position: absolute;
-      top: 60px;   /* subito sotto la navbar */
+      top: 60px;
       right: 10px;
       text-align: center;
       background: rgba(255, 255, 255, 0);
       padding: 20px 40px;
       border-radius: 8px;
     }
-    
     .hero-content h1 {
       font-size: 3rem;
       margin-bottom: 20px;
-      color: rgb(255, 255, 255); /* Colore di fallback */
-      -webkit-text-fill-color: #ffffff; /* Riempimento nero */
+      color: #ffffff;
+      -webkit-text-fill-color: #ffffff;
     }
-
     .hero-content p {
       font-size: 1.8rem;
-      color: rgb(255, 255, 255); /* Colore di fallback */
-      -webkit-text-fill-color: #ffffff; /* Riempimento nero */
+      color: #ffffff;
+      -webkit-text-fill-color: #ffffff;
     }
-
-        
-    /* Sezione Cards */
     .cards-section {
       display: flex;
       justify-content: space-around;
@@ -111,7 +91,6 @@
       max-width: 1200px;
       margin: 0 auto;
     }
-    
     .card {
       background-color: #fff;
       flex: 1 1 300px;
@@ -122,83 +101,80 @@
       padding: 20px;
       margin: 10px;
     }
-    
     .card img {
       width: 100%;
       max-height: 150px;
       object-fit: contain;
       margin-bottom: 15px;
+      cursor: pointer;
     }
-    
     .card h3 {
       color: #2E7D32;
       margin-bottom: 10px;
     }
-    
     .card p {
       font-size: 0.9rem;
       color: #666;
     }
-    
-    /* Footer */
     footer {
       background-color: #fff;
       text-align: center;
       padding: 15px 20px;
       box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-      position: fixed;
+      position: relative;
       bottom: 0;
       width: 100%;
       font-size: 0.9rem;
       color: #333;
     }
-    
-    /* Media Query per dispositivi mobili */
     @media (max-width: 768px) {
-      /* Navbar: disposizione in colonna */
       .navbar-container {
         flex-direction: column;
       }
-      
       .navbar-right {
         margin-top: 10px;
       }
-      
-      /* Hero: centra il contenuto su mobile per una migliore leggibilità */
       .hero-content {
         position: static;
         text-align: center;
         padding: 20px;
         margin-top: 20px;
       }
-      
       header .hero {
         height: auto;
         padding-top: 80px;
         padding-bottom: 20px;
       }
-      
-      /* Cards: disponi le card in colonna, una sotto l'altra */
       .cards-section {
         flex-direction: column;
         padding: 20px;
       }
-      
       .card {
         width: 100%;
         max-width: 100%;
         margin-bottom: 20px;
       }
-      
-      /* Footer: posizione relativa per evitare sovrapposizioni */
-      footer {
-        position: relative;
-      }
+    }
+    .fullscreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+    .fullscreen img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
-  <!-- Navbar fissa in alto -->
   <nav>
     <div class="navbar-container">
       <div class="navbar-left">
@@ -214,7 +190,6 @@
     </div>
   </nav>
   
-  <!-- Hero Section per la Home -->
   <header id="home">
     <div class="hero">
       <div class="hero-content">
@@ -225,37 +200,44 @@
       </div>
     </div>
   </header>
-  
-  <!-- Sezione Cards -->
-  <main>
-    <section class="cards-section">
-      <div class="card">
-        <img src="card1.png" alt="Immagine 1">
-        <h3>Non-Native species</h3>
-        <p>Invasive species are non-native organisms that spread rapidly in new environments, often causing harm to local ecosystems, economies, and even human health. These species, whether plants, animals, or microorganisms, outcompete native species for resources, disrupt food chains, and alter habitats. Invasive species are often introduced through global trade, travel, and accidental releases. Controlling their spread is challenging and costly, making prevention and early detection key strategies in protecting biodiversity and maintaining ecological balance.</p>
-      </div>
-      <div class="card">
-        <img src="card2.png" alt="Immagine 2">
-        <h3>Native species</h3>
-        <p>Native flora plays a crucial role in maintaining the health and stability of ecosystems. These plants have evolved alongside local wildlife, creating balanced relationships that support pollinators, herbivores, and other organisms. Native species help prevent soil erosion, regulate water cycles, and contribute to biodiversity by providing food and shelter for various animals. They are also more adapted to local climates and soil conditions, making them more resilient and requiring less maintenance than non-native species. Protecting native flora is essential for preserving ecological integrity, supporting agriculture, and maintaining the natural beauty of landscapes.</p>
-      </div>
-      <div class="card">
-        <img src="card3.png" alt="Immagine 3">
-        <h3>Join us in growing a greener future—one plant at a time!</h3>
-        <p>Your Botanical Garden is an innovative eco-tourism project that invites visitors to actively participate in the cultivation and preservation of native plant species. This initiative allows tourists to adopt and care for indigenous flora, contributing to local conservation efforts while enjoying a hands-on experience in nature.
-          Visitors can choose from a variety of native plants, learn sustainable gardening techniques, and understand the vital role of these species in maintaining biodiversity. Expert botanists guide participants through the process, sharing knowledge about local ecosystems and the importance of preserving native flora.
-          Beyond cultivation, Your Botanical Garden offers guided tours, workshops, and relaxation areas where guests can immerse themselves in the beauty of the landscape.
-        </p>
-      </div>
-    </section>
+
+  <main id="main-content">
+    <!-- Contenuto dinamico qui -->
   </main>
   
-  <!-- Footer fisso in fondo -->
   <footer>
     <p>@Chiara Riggio 2025 - Seeds of Tomorrow</p>
   </footer>
   
   <script>
+    function loadPage(page) {
+      fetch(page)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('main-content').innerHTML = data;
+        });
+    }
+    document.querySelectorAll('.navbar-right a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href').substring(1);
+        if (href === 'gallery') {
+          e.preventDefault();
+          loadPage('gallery.html');
+        } else if (href === 'home') {
+          location.reload();
+        }
+      });
+    });
+    document.addEventListener('click', function(e) {
+      if (e.target.closest('.card img')) {
+        const src = e.target.src;
+        const fullscreen = document.createElement('div');
+        fullscreen.classList.add('fullscreen');
+        fullscreen.innerHTML = `<img src="${src}" alt=""><span style="position:absolute; top:20px; right:30px; color:white; font-size:30px; cursor:pointer;">&times;</span>`;
+        document.body.appendChild(fullscreen);
+        fullscreen.addEventListener('click', () => fullscreen.remove());
+      }
+    });
   </script>
 </body>
 </html>

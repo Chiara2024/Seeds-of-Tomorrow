@@ -1,11 +1,14 @@
 <style>
     /* Contenitore principale delle card */
     @media (max-width: 768px) {
-        .cards-section {
-          flex-direction: column;
-          align-items: center;
-        }
+    .cards-section {
+        flex-direction: column;
+        justify-content: center; /* centra gli elementi orizzontalmente in modalità colonna */
+        align-items: center;
+        width: 100%;
       }
+
+    }
       /* Stili per le card */
       .cards-section {
         display: flex;
@@ -20,7 +23,8 @@
       .card {
         display: flex;
         flex-direction: column;  /* per distribuire il contenuto verticalmente */
-        width: 200px;
+        width: 90%; 
+        max-width: none;
         border: 2px solid #333;
         border-radius: 8px;
         overflow: hidden;

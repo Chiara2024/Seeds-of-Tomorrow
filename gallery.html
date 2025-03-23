@@ -1,25 +1,35 @@
 <style>
     /* Contenitore principale delle card */
-    .cards-section {
-      display: flex;
-      flex-wrap: wrap;       /* le card vanno a capo se non c'è più spazio */
-      gap: 20px;             /* distanza orizzontale/verticale tra le card */
-      padding: 20px;
-      justify-content: flex-start;
-      align-items: flex-start;
-      background-color: #F5F5F5;
-    }
-  
-    /* Stile di base per ogni card */
-    .card {
-      width: 200px;         /* larghezza fissa */
-      border: 2px solid #333;
-      border-radius: 8px;
-      overflow: hidden;
-      text-align: center;
-      background-color: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
+    @media (max-width: 768px) {
+        .cards-section {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      /* Stili per le card */
+      .cards-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;  
+        align-items: stretch;  /* Estendi le card per avere la stessa altezza nella riga */
+        background-color: #F5F5F5;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;  /* per distribuire il contenuto verticalmente */
+        width: 200px;
+        border: 2px solid #333;
+        border-radius: 8px;
+        overflow: hidden;
+        text-align: center;
+        background-color: #fff;
+        cursor: pointer;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      }
+
   
     /* Rendiamo l'intera card cliccabile con un link */
     .card a {
